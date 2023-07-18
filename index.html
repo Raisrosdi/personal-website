@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Individual Assignment</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/bc184dfc0d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="image/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#my gallery">My Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="headertext">
+                    <p>IMS456 student</p>
+                    <h1>Hi, I'm <span>Rais</span><br>Rosdi from IM245B</h1>
+                </div>
+            </div>
+        </div>
+        <!-- -----------about----------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="image/photo_2023-07-16_15-11-24.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p> My name is Muhammmad Rais Bin Rosdi. I am 21 years old and I lived in Kelantan. My birth date is 22 March 2002 and I born at Hospital Machang, Kelantan
+                            My height is 170cm. My weight is 63kg. I lived in Jkr10, Jln Ku Chik Bengkeng, 18500 Machang, Kelantan.</p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links"onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Playing Football</span><br>Striker</li>
+                                    <li><span>UI/UX</span><br>Designing Web </li>
+                                    <li><span>Playing Badminton</span><br>Single/Double</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>State Representative</span><br>Champion</li>
+                                    <li><span>Individual Assignment</span><br>Create Own Website</li>
+                                    <li><span>State Representative</span><br>Runner-up</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>Sijil Pelajaran Malysia</span><br>2017</li>
+                                    <li><span>Sijil Matrikulasi </span><br>2020-2022</li>
+                                    <li><span>Bachelor Degree</span><br>2022-2026</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-------------my gallery------------->
+<div id="my gallery">
+    <div class="container">
+        <h1 class="sub-title">My Gallery</h1>
+        <div class="gallery-list">
+            <div class="gallery">
+                <img src="image/photo_2023-07-16_15-11-45.jpg">
+            </div>
+            <div class="gallery">
+                <img src="image/photo_2023-07-16_11-44-05.jpg">
+        </div>
+        <div class="gallery">
+            <img src="image/photo_2023-07-16_11-49-30.jpg">
+    </div>
+    <div class="gallery">
+        <img src="image/photo_2023-07-16_15-10-07.jpg">
+</div>
+<div class="gallery">
+    <img src="image/photo_2023-07-16_11-56-41.jpg">
+</div>
+<div class="gallery">
+    <img src="image/photo_2023-07-16_11-49-24.jpg">
+</div>
+<!-----------contact--------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>raisrosdi@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>0138966602</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Rais. Made with<i class="fas fa-heart"></i> by Rais Rosdi </p>
+    </div>
+</div>
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+         }
+        </script>
+    </body>
+</html>
